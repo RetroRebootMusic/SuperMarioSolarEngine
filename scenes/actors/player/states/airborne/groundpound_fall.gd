@@ -17,9 +17,9 @@ func _tell_switch():
 		return &"GroundPoundLand"
 
 	if movement.can_air_action() and Input.is_action_just_pressed(&"dive"):
-		return &"AirborneDive"
+		return &"OdysseyDive"
 
-	if Input.is_action_just_pressed(&"up"):
-		return &"Fall"
+	if input.buffered_input(&"up"):
+		return &"PoundCancel"
 
 	return &""
